@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Connects to server 3.90.70.71 with key in ~/.ssh/school
-
-ssh -i ~/.ssh/school ubuntu@3.90.70.71
+# connecting to my server using a different identity file
+ssh ubuntu@3.90.70.71 -i ~/.ssh/school
