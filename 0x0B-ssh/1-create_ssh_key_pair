@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#Script to generate an SSh key
+# Connects to server 54.237.118.22 with key in ~/.ssh/school
 
-ssh-keygen -t rsa -f school -b 4096 -N betty
+ssh -i ~/.ssh/school ubuntu@54.237.118.22
