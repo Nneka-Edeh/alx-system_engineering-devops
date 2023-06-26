@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# connecting to my server using a different identity file
-ssh ubuntu@54.146.58.134 -i ~/.ssh/school
+#A script that connects to serve through a private key
+
+ssh -i ~/.ssh/school ubuntu@<54.146.58.134
