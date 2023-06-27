@@ -14,3 +14,6 @@ transfer_file() {
         scp -o StrictHostKeyChecking=no -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
     fi
 }
+
+# Call the function with the arguments
+transfer_file "$@"
