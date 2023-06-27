@@ -1,0 +1,16 @@
+#!/bin/bash
+
+transfer_file() {
+    local path_to_file=$1
+    local ip=$2
+    local username=$3
+    local path_to_ssh_key=$4
+
+    if [ $# -lt 3 ]; then
+        echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+    elif [ $# -eq 3 ]; then
+        scp -o StrictHostKeyChecking=no "$path_to_file" "$username@$ip:~/"
+    else
+        scp -o StrictHostKeyChecking=no -i "$path_to_ssh_key" "$path_to_file" "$username@$ip:~/"
+    fi
+}
